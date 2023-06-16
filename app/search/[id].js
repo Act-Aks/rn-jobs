@@ -1,3 +1,4 @@
+import { RAPID_API_KEY } from "@env";
 import axios from "axios";
 import { Stack, useRouter, useSearchParams } from "expo-router";
 import React, { useEffect, useState } from "react";
@@ -33,8 +34,7 @@ const JobSearch = () => {
         method: "GET",
         url: `https://jsearch.p.rapidapi.com/search`,
         headers: {
-          "X-RapidAPI-Key":
-            "7484c68b23msh86f0e2b28dae0eap1d1a40jsn6f0d02165b89",
+          "X-RapidAPI-Key": RAPID_API_KEY,
           "X-RapidAPI-Host": "jsearch.p.rapidapi.com",
         },
         params: {
